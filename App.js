@@ -14,14 +14,16 @@ import Build from './src/pages/build';
 import Enchant from './src/pages/enchantement';
 import Calculator from './src/pages/calculator';
 import Aptitudes from './src/pages/apptitudes';
-import Search from './src/pages/search';
+
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-
-
+import NavigationStacked from './src/pages/navigationStacked';
+import {Provider} from 'react-redux'
+import { Store } from './src/redux/store';
+const Tab = createMaterialBottomTabNavigator();
 const App= () => {
-  const Tab = createMaterialBottomTabNavigator();
+  
   return (
-    <SafeAreaView style={{flex:1}}>
+<Provider store={Store}>
       <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Build" component={Build} options={{
@@ -30,7 +32,7 @@ const App= () => {
             <Image source={require('./src/images/sword.png')} style={{width:26,height:26}}></Image>
         )
         }} />
-        <Tab.Screen name="Search" component={Search}  options={{
+        <Tab.Screen name="Search" component={NavigationStacked}  options={{
           title:'Search',tabBarColor:'#89d6ce',
           tabBarIcon: ({color})=>(
             <Image source={require('./src/images/search.png')} style={{width:26,height:26}}></Image>
@@ -59,8 +61,8 @@ const App= () => {
         )
         }}/>
       </Tab.Navigator>
-    </NavigationContainer>
-    </SafeAreaView>
+    </NavigationContainer></Provider>
+
   );
 };
 
