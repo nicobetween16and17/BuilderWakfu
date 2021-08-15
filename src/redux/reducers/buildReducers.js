@@ -1,4 +1,4 @@
-import { CLASSE,AMU, ANNEAU1, ANNEAU2, BOTTES, CAPE, CASQUE, CEINTURE, EMBLEME, EPAU, FAMILIER, MAIN, MONTURE, PLASTRON, SECONDEMAIN,LEVEL } from "../actions/actions"
+import { CLASSE,AMU, ANNEAU1, ANNEAU2, BOTTES, CAPE, CASQUE, CEINTURE, EMBLEME, EPAU, FAMILIER, MAIN, MONTURE, PLASTRON, SECONDEMAIN,LEVEL,CHOSEN } from "../actions/actions"
 
 const initialstatelevel={
     content:1
@@ -48,6 +48,9 @@ const initialstateFamilier = {
 const initialstateMonture = {
     content:'../images/equipement/pet.png'
 }
+const chosenType = {
+    content : 0
+}
 export const classeReducer= (state =initialstateClasse,action)=>{
     switch (action.type) {
         case CLASSE:
@@ -58,9 +61,10 @@ export const classeReducer= (state =initialstateClasse,action)=>{
     return state
 }
 export const casqueReducer= (state =initialstateCasque,action)=>{
+    
     switch (action.type) {
         case CASQUE:
-            
+            console.log('casqueReducer: ',action.value)
             return {content: action.value}
               
     }
@@ -187,6 +191,15 @@ export const ceintureReducer= (state =initialstateCeinture,action)=>{
 export const BuildlevelReducer= (state =initialstatelevel,action)=>{
     switch (action.type) {
         case LEVEL:
+            
+            return {content: action.value}
+              
+    }
+    return state
+}
+export const chosenTypeReducer= (state =chosenType,action)=>{
+    switch (action.type) {
+        case CHOSEN:
             
             return {content: action.value}
               

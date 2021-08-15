@@ -1,5 +1,6 @@
 import {  } from 'react-native'
 import React from 'react'
+import { chosenTypeReducer } from '../reducers/buildReducers';
 export const LEVEL = 'LEVEL';
 export const TYPE = 'TYPE';
 export const RARITY = 'RARITY';
@@ -19,6 +20,39 @@ export const ANNEAU2 = 'ANNEAU2'
 export const FAMILIER = 'FAMILIER'
 export const MONTURE = 'MONTURE'
 export const ITEM = 'ITEM'
+export const LOAD = 'LOAD'
+export const CHOSEN = 'CHOSEN'
+export const PV = 'PV'
+export const RES ='RES'
+export const BAR = 'BAR'
+export const SOINR ='SOINR'
+export const PVAR = 'PVAR'
+export const MELEM ='MELEM'
+export const MMONO ='MMONO'
+export const MZONE ='MZONE'
+export const MMELEE ='MMELEE'
+export const MDIST = 'MDIST'
+export const PDV = 'PDV'
+export const TACESQ = 'TACESQ'
+export const ESQ ='ESQ'
+export const INIT ='INIT'
+export const TAC = 'TAC'
+export const VOL = 'VOL'
+export const CCP = 'CCP'
+export const PARADE = 'PARADE'
+export const MCRIT ='MCRIT'
+export const MDOS = 'MDOS'
+export const MZERK = 'MZERK'
+export const MSOIN = 'MSOIN'
+export const RDOS = 'RDOS'
+export const RCRIT = 'RCRIT'
+export const PA = 'PA'
+export const PM ='PM'
+export const PO = 'PO'
+export const PW = 'PW'
+export const CTRL = 'CTRL'
+export const DI = 'DI'
+export const RELEM='RELEM'
 export const setLevel = (value)=>{
     return{
         type:LEVEL,
@@ -139,4 +173,201 @@ export const setCurrentItem =(value)=>{
         value:value
     }
 }
-
+export const isLoading =(value)=>{
+    return{
+        type:LOAD,
+      
+    }
+}
+export const setChosen =(value)=>{
+    return{
+        type:CHOSEN,
+        value:value
+    }
+}
+export const setpvP =(value)=>{
+    return{
+        type:PV,
+        value:value
+    }
+}
+export const setRES =(value)=>{
+    return{
+        type:RES,
+        value:value
+    }
+}
+export const setbarrier =(value)=>{
+    return{
+        type:BAR,
+        value:value
+    }
+}
+export const setsoinR =(value)=>{
+    return{
+        type:SOINR,
+        value:value
+    }
+}
+export const setpvAr =(value)=>{
+    return{
+        type:PVAR,
+        value:value
+    }
+}
+export const setmElem =(value)=>{
+    return{
+        type:MELEM,
+        value:value
+    }
+}
+export const setmMono =(value)=>{
+    return{
+        type:MMONO,
+        value:value
+    }
+}
+export const setmZone =(value)=>{
+    return{
+        type:MZONE,
+        value:value
+    }
+}
+export const setmMelee =(value)=>{
+    return{
+        type:MMELEE,
+        value:value
+    }
+}
+export const setmDist =(value)=>{
+    return{
+        type:MDIST,
+        value:value
+    }
+}
+export const setpdv =(value)=>{
+    return{
+        type:PDV,
+        value:value
+    }
+}
+export const settacEsq =(value)=>{
+    return{
+        type:TACESQ,
+        value:value
+    }
+}
+export const setesq =(value)=>{
+    return{
+        type:ESQ,
+        value:value
+    }
+}
+export const setinit =(value)=>{
+    return{
+        type:INIT,
+        value:value
+    }
+}
+export const settac =(value)=>{
+    return{
+        type:TAC,
+        value:value
+    }
+}
+export const setvol =(value)=>{
+    return{
+        type:VOL,
+        value:value
+    }
+}
+export const setccP =(value)=>{
+    return{
+        type:CCP,
+        value:value
+    }
+}
+export const setparade =(value)=>{
+    return{
+        type:PARADE,
+        value:value
+    }
+}
+export const setmCrit =(value)=>{
+    return{
+        type:MCRIT,
+        value:value
+    }
+}
+export const setmDos =(value)=>{
+    return{
+        type:MDOS,
+        value:value
+    }
+}
+export const setmZerk =(value)=>{
+    return{
+        type:MZERK,
+        value:value
+    }
+}
+export const setmSoin =(value)=>{
+    return{
+        type:MSOIN,
+        value:value
+    }
+}
+export const setresDos =(value)=>{
+    return{
+        type:RDOS,
+        value:value
+    }
+}
+export const setresCrit =(value)=>{
+    return{
+        type:RCRIT,
+        value:value
+    }
+}
+export const setpa =(value)=>{
+    return{
+        type:PA,
+        value:value
+    }
+}
+export const setpm =(value)=>{
+    return{
+        type:PM,
+        value:value
+    }
+}
+export const setpo =(value)=>{
+    return{
+        type:PO,
+        value:value
+    }
+}
+export const setpw =(value)=>{
+    return{
+        type:PW,
+        value:value
+    }
+}
+export const setctrl =(value)=>{
+    return{
+        type:CTRL,
+        value:value
+    }
+}
+export const setDI =(value)=>{
+    return{
+        type:DI,
+        value:value
+    }
+}
+export const setresElem =(value)=>{
+    return{
+        type:RELEM,
+        value:value
+    }
+}

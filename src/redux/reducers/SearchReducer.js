@@ -9,7 +9,7 @@ const initialstateType ={
     content:[]
 }
 const initialstateRarity ={
-    content:4
+    content:[4,5,6,7]
 }
 export const levelReducer= (state =initialstateLevel,action)=>{
     switch (action.type) {

@@ -22,7 +22,10 @@ const Calculator = () => {
       <VirtualizedList
         data={DATA}
         initialNumToRender={4}
-        renderItem={({ item }) => <Item title={item.title} />}
+        renderItem={({ item }) => (
+          <View style={styles.item}>
+            <Text style={styles.title}>{item.title}</Text>
+          </View>) }
         keyExtractor={item => item.key}
         getItemCount={getItemCount}
         getItem={getItem}

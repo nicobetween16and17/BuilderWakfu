@@ -19,6 +19,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import NavigationStacked from './src/pages/navigationStacked';
 import {Provider} from 'react-redux'
 import { Store } from './src/redux/store';
+import NavigatorTop from './src/pages/navigationTop';
 const Tab = createMaterialBottomTabNavigator();
 const App= () => {
   
@@ -26,7 +27,7 @@ const App= () => {
 <Provider store={Store}>
       <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Build" component={Build} options={{
+        <Tab.Screen name="Build" component={NavigatorTop} options={{
           title:'Build',tabBarColor:'#d47b6a',
           tabBarIcon: ({color})=>(
             <Image source={require('./src/images/sword.png')} style={{width:26,height:26}}></Image>

@@ -9,7 +9,9 @@ const Stack = createNativeStackNavigator();
 const NavigationStacked=()=>{
   
   return(
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{
+        headerShown:false
+      }}>
           <Stack.Screen name = 'Searchtool' component = {Search}/>
           <Stack.Screen name = 'Result' component = {ResultatRecherche}/>
           <Stack.Screen name = 'Item' component = {FicheItem}/>

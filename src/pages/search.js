@@ -10,11 +10,11 @@ import { useDispatch } from 'react-redux';
 const Search = () => {
 const nav = useNavigation()
 const dispatch = useDispatch()
-    const [rarity, setrarity] = useState(1)
+    const [rarity, setrarity] = useState([1])
     const [levelmin, setlevelmin] = useState(15)
     const [rarityName, setrarityName] = useState(optionname(rarity))
     const [equipType, setequipType] = useState([108, 110, 113, 115, 254, 518])
-   
+    const [state, setstate] = useState(initialState)
     const [selected, setselected] = useState(0)
 
     useEffect(() => {
@@ -27,17 +27,19 @@ const dispatch = useDispatch()
         console.log('LEVEL: ', levelmin - 15, '-', levelmin)
     }, [levelmin])
     function optionname(prop) {
-        switch (prop) {
+        let rarities = []
+        switch (true) {
             
-            case 0: return ('Inhabituel')
-            case 1: return ('Commun')
-            case 2: return ('Rare')
-            case 3: return ('Mythique')
-            case 4: return ('Légendaire')
-            case 5: return ('Relique')
-            case 6: return ('Souvenir')
-            case 7: return ('Epique')
+            case prop.includes(0): rarities.push('Inhabituel ')
+            case prop.includes(1): rarities.push('Commun ')
+            case prop.includes(2): rarities.push('Rare ')
+            case prop.includes(3): rarities.push('Mythique ')
+            case prop.includes(4): rarities.push('Légendaire ')
+            case prop.includes(5): rarities.push('Relique ')
+            case prop.includes(6): rarities.push('Souvenir ')
+            case prop.includes(7): rarities.push('Epique ')
         }
+        return rarities
     }
     const setRange = (position) => {
         let returnedRange = []
@@ -122,8 +124,8 @@ const dispatch = useDispatch()
                 color='#89d6ce'
                 selectedValue={rarity}
                 onValueChange={(itemValue, itemIndex) => {
-                    setrarity(itemValue)
-                    setrarityName(optionname(itemValue))
+                    setrarity([itemValue])
+                    setrarityName(optionname([itemValue]))
 
                 }
                 }>
