@@ -10,16 +10,14 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {SafeAreaView,ScrollView,StatusBar,StyleSheet,Text,useColorScheme,View,Image} from 'react-native';
-import Build from './src/pages/build';
 import Enchant from './src/pages/enchantement';
 import Calculator from './src/pages/calculator';
-import Aptitudes from './src/pages/apptitudes';
-
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import NavigationStacked from './src/pages/navigationStacked';
 import {Provider} from 'react-redux'
 import { Store } from './src/redux/store';
 import NavigatorTop from './src/pages/navigationTop';
+import AptitudeNavigator from './src/pages/aptitudeNavigator';
 const Tab = createMaterialBottomTabNavigator();
 const App= () => {
   
@@ -47,7 +45,7 @@ const App= () => {
         }}/>
 
         
-        <Tab.Screen name="Aptitudes" component={Aptitudes} options={{
+        <Tab.Screen name="Aptitudes" component={AptitudeNavigator} options={{
           title:'Aptitudes',tabBarColor:'#d780d9',
           tabBarIcon: ({color})=>(
             

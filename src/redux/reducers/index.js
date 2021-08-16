@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { AptitudeReducer } from './aptitudeReducer'
+import { AptitudeBarReducer, AptitudeCcpReducer, AptitudeEsqReducer, AptitudeInitReducer, AptitudeMcritReducer, AptitudeMdistReducer, AptitudeMdosReducer, AptitudeMelemReducer, AptitudeMmeleeReducer, AptitudeMmonoReducer, AptitudeMsoinReducer, AptitudeMzerkReducer, AptitudeMzoneReducer, AptitudeParadeReducer, AptitudePvarReducer, AptitudePvReducer, AptitudeRcritReducer, AptitudeRdosReducer, AptitudeResReducer, AptitudeSoinrReducer, AptitudeTacesqReducer, AptitudeTacReducer, AptitudeVolReducer,AptitudePAReducer, AptitudePMReducer, AptitudePOReducer, AptitudePWReducer, AptitudeCtrlReducer, AptitudeRelemReducer, AptitudeDIReducer, AptitudePdvReducer } from './aptitudeReducer'
 import { amuReducer, anneau1Reducer, anneau2Reducer, bottesReducer, BuildlevelReducer, capeReducer, casqueReducer, ceintureReducer, chosenTypeReducer, classeReducer, emblemeReducer, epauReducer, familierReducer, mainReducer, montureReducer, plastronReducer, secondemainReducer } from './buildReducers'
 import { itemReducer, loadReducer } from './resultReducer'
 import {levelReducer,typeReducer,rarityReducer} from './SearchReducer'
@@ -27,6 +27,36 @@ const allReducers = combineReducers({
     item:itemReducer,
     load:loadReducer,
     chosen:chosenTypeReducer,
-    apptitude:AptitudeReducer
+    Apv:AptitudePvReducer,
+    Ares:AptitudeResReducer,
+    Abar:AptitudeBarReducer,
+    Asoinr:AptitudeSoinrReducer,
+    Apvar:AptitudePvarReducer,
+    Amelem:AptitudeMelemReducer,
+    Ammono:AptitudeMmonoReducer,
+    Amzone:AptitudeMzoneReducer,
+    Ammelee:AptitudeMmeleeReducer,
+    Amdist:AptitudeMdistReducer,
+    Apdv:AptitudePdvReducer,
+    Atac:AptitudeTacReducer,
+    Aesq:AptitudeEsqReducer,
+    Aini:AptitudeInitReducer,
+    Atacesq:AptitudeTacesqReducer,
+    Avol:AptitudeVolReducer,
+    Accp:AptitudeCcpReducer,
+    Aparade:AptitudeParadeReducer,
+    Amcrit:AptitudeMcritReducer,
+    Amdos:AptitudeMdosReducer,
+    Amzerk:AptitudeMzerkReducer,
+    Amsoin:AptitudeMsoinReducer,
+    Ardos:AptitudeRdosReducer,
+    Arcrit:AptitudeRcritReducer,
+    Apa:AptitudePAReducer,
+    Apm:AptitudePMReducer,
+    Apo:AptitudePOReducer,
+    Apw:AptitudePWReducer,
+    Actrl:AptitudeCtrlReducer,
+    Adi:AptitudeDIReducer,
+    Arelem:AptitudeRelemReducer
 })
 export default allReducers
