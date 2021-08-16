@@ -5,12 +5,12 @@ import { setbarrier, setccP, setctrl, setDI, setesq, setinit, setmCrit, setmDist
 import { Apptitude } from './apptitudes';
 const Force=()=>{
     const dispatch = useDispatch()
-    const mElem = useSelector((state)=>state.Amelem.Melem)
-    const mMono = useSelector((state)=>state.Ammono.Mmono)
-    const mZone = useSelector((state)=>state.Amzone.Mzone)
-    const mMelee = useSelector((state)=>state.Ammelee.Mmelee)
-    const mDist = useSelector((state)=>state.Amdist.Mdist)
-    const pdv = useSelector((state)=>state.Apdv.pdv)
+    const mElem = useSelector((state)=>state.aptitude.Melem)
+    const mMono = useSelector((state)=>state.aptitude.Mmono)
+    const mZone = useSelector((state)=>state.aptitude.Mzone)
+    const mMelee = useSelector((state)=>state.aptitude.Mmelee)
+    const mDist = useSelector((state)=>state.aptitude.Mdist)
+    const pdv = useSelector((state)=>state.aptitude.pdv)
     return(
         <ScrollView style={{ backgroundColor: '#191b24', flex: 1, paddingLeft: 5, }} contentContainerStyle={{ justifyContent: 'space-around' }}>
         <View style={{ alignItems: 'center', justifyContent: 'space-around', marginBottom: 20 }}>

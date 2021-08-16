@@ -25,233 +25,78 @@ const initialstateAptitude = {
     ctrl: 0,
     DI: 0,
     Relelm: 0,
-}
-export const AptitudePvReducer = (state = initialstateAptitude, action) => {
+};
+
+export const AptitudeReducer = (state = initialstateAptitude, action) => {
+
+    const aptiState = { ...state }; // Clone du state
+
     switch (action.type) {
         case PV:
-            return { pv: action.value }
-    }
-    return state
-}
-export const AptitudeResReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.pv = action.value; break;
         case RES:
-            return { res: action.value }
-    }
-    return state
-}
-export const AptitudeBarReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.res = action.value; break;
         case BAR:
-            return { barrier: action.value }
-    }
-    return state
-}
-export const AptitudeSoinrReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.barrier = action.value; break;
         case SOINR:
-            return { soinR: action.value}
-
-    }
-    return state
-}
-export const AptitudePvarReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.soinR = action.value; break;
         case PVAR:
-            return { pvAr: action.value}
-
-    }
-    return state
-}
-export const AptitudeMelemReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.pvAr = action.value; break;
         case MELEM:
-            return { Melem: action.value}
-
-    }
-    return state
-}
-export const AptitudeMmonoReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Melem = action.value; break;
         case MMONO:
-            return { Mmono: action.value }
-    }
-    return state
-}
-export const AptitudeMzoneReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Mmono = action.value; break;
         case MZONE:
-            return { Mzone: action.value}
-
-    }
-    return state
-}
-export const AptitudeMmeleeReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Mzone = action.value; break;
         case MMELEE:
-            return { MMELEE: action.value}
-    }
-    return state
-}
-export const AptitudeMdistReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.MMELEE = action.value; break;
         case MDIST:
-            return { Mdist: action.value }
-
-    }
-    return state
-}
-export const AptitudePdvReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Mdist = action.value; break;
         case PDV:
-            return { pdv: action.value}
-    }
-    return state
-}
-export const AptitudeTacesqReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.pdv = action.value; break;
         case TACESQ:
-            return { tacesq: action.value}
-    }
-    return state
-}
-export const AptitudeEsqReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.tacesq = action.value; break;
         case ESQ:
-            return { esq: action.value}
-    }
-    return state
-}
-export const AptitudeInitReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.esq = action.value; break;
         case INIT:
-            return { Ini: action.value}
-    }
-    return state
-}
-export const AptitudeTacReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Ini = action.value; break;
         case TAC:
-            return { tac: action.value}
-    }
-    return state
-}
-export const AptitudeVolReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.tac = action.value; break;
         case VOL:
-            return { vol: action.value }
-    }
-    return state
-}
-export const AptitudeCcpReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.vol = action.value; break;
         case CCP:
-            return { Crit: action.value }
-
-    }
-    return state
-}
-export const AptitudeParadeReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Crit = action.value; break;
         case PARADE:
-            return { PRD: action.value }
-
-    }
-    return state
-}
-export const AptitudeMcritReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.PRD = action.value; break;
         case MCRIT:
-            return { Mcrit: action.value}
-    }
-    return state
-}
-export const AptitudeMdosReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Mcrit = action.value; break;
         case MDOS:
-            return { Mdos: action.value}
-    }
-    return state
-}
-export const AptitudeMzerkReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Mdos = action.value; break;
         case MZERK:
-            return { Mzerk: action.value}
-    }
-    return state
-}
-export const AptitudeMsoinReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Mzerk = action.value; break;
         case MSOIN:
-            return { Msoin: action.value}
-    }
-    return state
-}
-export const AptitudeRdosReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Msoin = action.value; break;
         case RDOS:
-            return { Rdos: action.value}
-
-    }
-    return state
-}
-export const AptitudeRcritReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Rdos = action.value; break;
         case RCRIT:
-            return { Rcrit: action.value}
-
-    }
-    return state
-}
-export const AptitudePAReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.Rcrit = action.value; break;
         case PA:
-            return { PA: action.value }
-    }
-    return state
-}
-export const AptitudePMReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.PA = action.value; break;
         case PM:
-            return{ PM:action.value }
-    }
-    return state
-}
-export const AptitudePOReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.M = action.value; break;
         case PO:
-            return { PO: action.value}
-
-    }
-    return state
-}
-export const AptitudePWReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.PO = action.value; break;
         case PW:
-            return { PW: action.value }
-    }
-    return state
-}
-export const AptitudeCtrlReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.PW = action.value; break;
         case CTRL:
-            return { ctrl: action.value }
-
-    }
-    return state
-}
-export const AptitudeDIReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.ctrl = action.value; break;
         case DI:
-            return { DI: action.value }
-
-    }
-    return state
-}
-export const AptitudeRelemReducer = (state = initialstateAptitude, action) => {
-    switch (action.type) {
+            aptiState.DI = action.value; break;
         case RELEM:
-            return { Relelm: action.value }
+            aptiState.Relelm = action.value; break;
+        default:
+            return state;
     }
-    return state
+
+    return aptiState;
 }

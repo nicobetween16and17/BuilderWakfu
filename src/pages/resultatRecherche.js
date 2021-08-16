@@ -81,7 +81,8 @@ const ResultatRecherche = () => {
                             title: element.title.fr,
                             imageId: element.definition.item.graphicParameters.gfxId,
                             rarity: element.definition.item.baseParameters.rarity,
-                            type:element.definition.item.baseParameters.itemTypeId
+                            type:element.definition.item.baseParameters.itemTypeId,
+                            stats:element.item.equipEffects
                         }
                         JsonTempo.push(child)
                     }

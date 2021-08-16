@@ -1,24 +1,31 @@
-import React, { Component, useRef, useState } from 'react';
+import React, { Component, useEffect, useRef, useState } from 'react';
 import { Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { setbarrier, setccP, setctrl, setDI, setesq, setinit, setmCrit, setmDist, setmDos, setmElem, setmMelee, setmMono, setmSoin, setmZerk, setmZone, setpa, setparade, setpdv, setpm, setpo, setpvAr, setpvP, setpw, setRES, setresCrit, setresDos, setresElem, setsoinR, settac, settacEsq, setvol } from '../../redux/actions/actions';
 export const Apptitude = ({ apptitudeLink, apptitudeName, value, maxvalue, setter, }) => {
 
     const timerId = useRef(null);
+    const incr = useRef(0);
 
-    function addStart() {
+    useEffect(() => {
+        incr.current = value;
+    }, [])
+
+    function addStart(time) {
         if (maxvalue !== '∞' && maxvalue <= value ) {
             return;
         }
+        
 
-        setter(value + 1);
-        timerId.current = setTimeout(addStart, 100);
+        incr.current = incr.current + 1;
+        console.log(`AddStart -> ${value} / ${incr.current} (${time})`);
+        setter(incr.current);
 
+        timerId.current = setTimeout(() => addStart(time - 200), time);
     }
     function addStop() {
         clearTimeout(timerId.current)
     }
-    console.log('COUCOU');
     return (
         <View style={{ justifyContent: 'space-between', borderWidth: 2, borderColor: '#d780d9', flexDirection: 'row', width: 320, padding: 3, margin: 2 }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
@@ -39,8 +46,9 @@ export const Apptitude = ({ apptitudeLink, apptitudeName, value, maxvalue, sette
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPressIn={() => {
+                            console.log(`Press -> ${value}`);
                             console.log('press IN')
-                            addStart();
+                            addStart(1000);
                         }}
                         onPressOut={() => {
                             console.log('press OUT')

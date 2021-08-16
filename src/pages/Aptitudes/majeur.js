@@ -5,13 +5,13 @@ import { setbarrier, setccP, setctrl, setDI, setesq, setinit, setmCrit, setmDist
 import { Apptitude } from './apptitudes';
 const Majeur=()=>{
     const dispatch = useDispatch()
-    const pa = useSelector((state)=>state.Apa.PA)
-    const pm = useSelector((state)=>state.Apm.PM)
-    const po = useSelector((state)=>state.Apo.PO)
-    const pw = useSelector((state)=>state.Apm.PW)
-    const ctrl = useSelector((state)=>state.Actrl.ctrl)
-    const DI = useSelector((state)=>state.Adi.DI)
-    const resElem = useSelector((state)=>state.Arelem.Relelm)
+    const pa = useSelector((state)=>state.aptitude.PA)
+    const pm = useSelector((state)=>state.aptitude.PM)
+    const po = useSelector((state)=>state.aptitude.PO)
+    const pw = useSelector((state)=>state.aptitude.PW)
+    const ctrl = useSelector((state)=>state.aptitude.ctrl)
+    const DI = useSelector((state)=>state.aptitude.DI)
+    const resElem = useSelector((state)=>state.aptitude.Relelm)
     return(
         <ScrollView style={{ backgroundColor: '#191b24', flex: 1, paddingLeft: 5, }} contentContainerStyle={{ justifyContent: 'space-around' }}>
         <View style={{ alignItems: 'center', justifyContent: 'space-around', marginBottom: 20 }}>

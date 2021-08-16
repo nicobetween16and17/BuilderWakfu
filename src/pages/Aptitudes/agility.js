@@ -5,11 +5,11 @@ import { setbarrier, setccP, setctrl, setDI, setesq, setinit, setmCrit, setmDist
 import { Apptitude } from './apptitudes';
 const Agility=()=>{
     const dispatch = useDispatch()
-    const tacEsq = useSelector((state)=>state.Atacesq.tacesq)
-    const esq = useSelector((state)=>state.Aini.Ini)
-    const init= useSelector((state)=>state.Atac.tac)
-    const tac = useSelector((state)=>state.Aesq.esq)
-    const vol = useSelector((state)=>state.Avol.vol)
+    const tacEsq = useSelector((state)=>state.aptitude.tacesq)
+    const esq = useSelector((state)=>state.aptitude.Ini)
+    const init= useSelector((state)=>state.aptitude.tac)
+    const tac = useSelector((state)=>state.aptitude.esq)
+    const vol = useSelector((state)=>state.aptitude.vol)
     const nbpoint = (((useSelector((state=>state.level.content))-2)/4))+1-(tacEsq+esq+init+tac+vol)
     return(
         <ScrollView style={{ backgroundColor: '#191b24', flex: 1, paddingLeft: 5, }} contentContainerStyle={{ justifyContent: 'space-around' }}>

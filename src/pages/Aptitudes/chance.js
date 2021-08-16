@@ -5,14 +5,14 @@ import { setbarrier, setccP, setctrl, setDI, setesq, setinit, setmCrit, setmDist
 import { Apptitude } from './apptitudes';
 const Chance=()=>{
     const dispatch = useDispatch()
-    const ccP = useSelector((state)=>state.Accp.Crit)
-    const parade = useSelector((state)=>state.Aparade.PRD)
-    const mCrit = useSelector((state)=>state.Amcrit.Mcrit)
-    const mDos = useSelector((state)=>state.Amdos.Mdos)
-    const mZerk = useSelector((state)=>state.Amzerk.Mzerk)
-    const mSoin = useSelector((state)=>state.Amsoin.Msoin)
-    const resDos = useSelector((state)=>state.Ardos.Rdos)
-    const resCrit = useSelector((state)=>state.Arcrit.Rcrit)
+    const ccP = useSelector((state)=>state.aptitude.Crit)
+    const parade = useSelector((state)=>state.aptitude.PRD)
+    const mCrit = useSelector((state)=>state.aptitude.Mcrit)
+    const mDos = useSelector((state)=>state.aptitude.Mdos)
+    const mZerk = useSelector((state)=>state.aptitude.Mzerk)
+    const mSoin = useSelector((state)=>state.aptitude.Msoin)
+    const resDos = useSelector((state)=>state.aptitude.Rdos)
+    const resCrit = useSelector((state)=>state.aptitude.Rcrit)
     return(
         <ScrollView style={{ backgroundColor: '#191b24', flex: 1, paddingLeft: 5, }} contentContainerStyle={{ justifyContent: 'space-around' }}>
         <View style={{ alignItems: 'center', justifyContent: 'space-around', marginBottom: 20 }}>
