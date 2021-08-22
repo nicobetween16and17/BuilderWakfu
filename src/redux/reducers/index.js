@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux'
-import { AptitudeReducer } from './aptitudeReducer'
+import { ApptitudepointsReducer, AptitudeReducer } from './aptitudeReducer'
 import { amuReducer, anneau1Reducer, anneau2Reducer, bottesReducer, BuildlevelReducer, capeReducer, casqueReducer, ceintureReducer, chosenTypeReducer, classeReducer, emblemeReducer, epauReducer, familierReducer, mainReducer, montureReducer, plastronReducer, secondemainReducer } from './buildReducers'
+import { CurrentRuneReducer, RuneLvReducer, RunesReducer } from './forgeReducer'
 import { itemReducer, loadReducer } from './resultReducer'
+import { ItemListReducer } from './resumeReducer'
 import {levelReducer,typeReducer,rarityReducer} from './SearchReducer'
 
 const allReducers = combineReducers({
@@ -27,6 +29,11 @@ const allReducers = combineReducers({
     item:itemReducer,
     load:loadReducer,
     chosen:chosenTypeReducer,
-    aptitude : AptitudeReducer
+    aptitude : AptitudeReducer,
+    items:ItemListReducer,
+    runes:RunesReducer,
+    runeLV:RuneLvReducer,
+    currentRune:CurrentRuneReducer,
+    
 })
 export default allReducers

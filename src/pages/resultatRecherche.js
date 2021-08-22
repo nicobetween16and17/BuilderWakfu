@@ -77,12 +77,21 @@ const ResultatRecherche = () => {
                 let JsonTempo = []
                 responseJson.forEach((element, index) => {
                     if (element.definition.item.level >= level - 15 && rarity.includes(element.definition.item.baseParameters.rarity) && element.definition.item.level <= level && equipementType.includes(element.definition.item.baseParameters.itemTypeId)) {
+                        var stats =[]
+                         element.definition.equipEffects.forEach((element,index)=>{
+                            var stat = {
+                                id:element.effect.definition.id,
+                                actionId:element.effect.definition.actionId,
+                                params:element.effect.definition.params
+                            }
+                            stats.push(stat)
+                         })
                         var child = {
                             title: element.title.fr,
                             imageId: element.definition.item.graphicParameters.gfxId,
                             rarity: element.definition.item.baseParameters.rarity,
                             type:element.definition.item.baseParameters.itemTypeId,
-                            stats:element.item.equipEffects
+                            stats:stats
                         }
                         JsonTempo.push(child)
                     }

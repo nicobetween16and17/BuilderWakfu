@@ -1,5 +1,4 @@
-import { BAR, CCP, CTRL, DI, ESQ, INIT, MCRIT, MDIST, MDOS, MELEM, MMELEE, MMONO, MSOIN, MZERK, MZONE, PA, PARADE, PDV, PM, PO, PV, PVAR, PW, RCRIT, RDOS, RELEM, RES, SOINR, TAC, TACESQ, VOL } from "../actions/actions"
-
+import { RESET,AGI, BAR, CCP, CHANCE, CTRL, DI, ESQ, FORCE, INIT, INTELL, MAJEUR, MCRIT, MDIST, MDOS, MELEM, MMELEE, MMONO, MSOIN, MZERK, MZONE, PA, PARADE, PDV, PM, PO, PV, PVAR, PW, RCRIT, RDOS, RELEM, RES, SOINR, TAC, TACESQ, VOL } from "../actions/actions"
 
 const initialstateAptitude = {
     pv: 0,
@@ -27,6 +26,7 @@ const initialstateAptitude = {
     Relelm: 0,
 };
 
+
 export const AptitudeReducer = (state = initialstateAptitude, action) => {
 
     const aptiState = { ...state }; // Clone du state
@@ -49,7 +49,7 @@ export const AptitudeReducer = (state = initialstateAptitude, action) => {
         case MZONE:
             aptiState.Mzone = action.value; break;
         case MMELEE:
-            aptiState.MMELEE = action.value; break;
+            aptiState.Mmelee = action.value; break;
         case MDIST:
             aptiState.Mdist = action.value; break;
         case PDV:
@@ -83,7 +83,7 @@ export const AptitudeReducer = (state = initialstateAptitude, action) => {
         case PA:
             aptiState.PA = action.value; break;
         case PM:
-            aptiState.M = action.value; break;
+            aptiState.PM = action.value; break;
         case PO:
             aptiState.PO = action.value; break;
         case PW:

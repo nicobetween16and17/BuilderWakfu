@@ -14,7 +14,6 @@ const dispatch = useDispatch()
     const [levelmin, setlevelmin] = useState(15)
     const [rarityName, setrarityName] = useState(optionname(rarity))
     const [equipType, setequipType] = useState([108, 110, 113, 115, 254, 518])
-    const [state, setstate] = useState(initialState)
     const [selected, setselected] = useState(0)
 
     useEffect(() => {

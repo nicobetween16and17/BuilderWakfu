@@ -13,17 +13,19 @@ const Chance=()=>{
     const mSoin = useSelector((state)=>state.aptitude.Msoin)
     const resDos = useSelector((state)=>state.aptitude.Rdos)
     const resCrit = useSelector((state)=>state.aptitude.Rcrit)
+    const nbpoint = useSelector((state)=>state.Buildlevel.aptitude.chance)
     return(
         <ScrollView style={{ backgroundColor: '#191b24', flex: 1, paddingLeft: 5, }} contentContainerStyle={{ justifyContent: 'space-around' }}>
         <View style={{ alignItems: 'center', justifyContent: 'space-around', marginBottom: 20 }}>
-                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_criticalhit.webp')} apptitudeName=' % Coup Critique' value={ccP} maxvalue={20} setter={(value) =>  dispatch(setccP(value))} />
-                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_block.webp')} apptitudeName=' % Parade' value={parade} maxvalue={20} setter={(value) =>  dispatch(setparade(value))} />
-                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_masterycritical.webp')} apptitudeName=' Maitrise Critique' value={mCrit} maxvalue='∞' setter={(value) =>  dispatch(setmCrit(value))} />
-                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_rearmastery.webp')} apptitudeName=' Maitrise Dos' value={mDos} maxvalue='∞' setter={(value) =>  dispatch(setmDos(value))} />
-                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_berserkmastery.webp')} apptitudeName=' Maitrise Berserk' value={mZerk} maxvalue='∞' setter={(value) =>  dispatch(setmZerk(value))} />
-                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_masteryhealth.webp')} apptitudeName=' Maitrise Soin' value={mSoin} maxvalue='∞' setter={(value) =>  dispatch(setmSoin(value))} />
-                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_rearresist.webp')} apptitudeName=' Resistance Dos' value={resDos} maxvalue={20} setter={(value) =>  dispatch(setresDos(value))} />
-                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_resistcritical.webp')} apptitudeName=' Resistance Critique' value={resCrit} maxvalue={20} setter={(value) =>  dispatch(setresCrit(value))} />
+            <Text style={{color:'white',textAlign:'center'}}>{nbpoint}</Text>
+                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_criticalhit.webp')} apptitudeName=' % Coup Critique' value={ccP} maxvalue={20} setter={(value) =>  dispatch(setccP(value))} formule={-1}/>
+                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_block.webp')} apptitudeName=' % Parade' value={parade} maxvalue={20} setter={(value) =>  dispatch(setparade(value))} formule={-1}/>
+                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_masterycritical.webp')} apptitudeName=' Maitrise Critique' value={mCrit} maxvalue='∞' setter={(value) =>  dispatch(setmCrit(value))} formule={-1}/>
+                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_rearmastery.webp')} apptitudeName=' Maitrise Dos' value={mDos} maxvalue='∞' setter={(value) =>  dispatch(setmDos(value))} formule={-1}/>
+                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_berserkmastery.webp')} apptitudeName=' Maitrise Berserk' value={mZerk} maxvalue='∞' setter={(value) =>  dispatch(setmZerk(value))} formule={-1}/>
+                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_masteryhealth.webp')} apptitudeName=' Maitrise Soin' value={mSoin} maxvalue='∞' setter={(value) =>  dispatch(setmSoin(value))} formule={-1}/>
+                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_rearresist.webp')} apptitudeName=' Resistance Dos' value={resDos} maxvalue={20} setter={(value) =>  dispatch(setresDos(value))} formule={-1}/>
+                <Apptitude apptitudeLink={require('../../images/aptitudes/apt_resistcritical.webp')} apptitudeName=' Resistance Critique' value={resCrit} maxvalue={20} setter={(value) =>  dispatch(setresCrit(value))} formule={-1}/>
             </View></ScrollView>
     )
 }

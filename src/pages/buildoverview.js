@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 const Buildoverview = () => {
     const niveau = useSelector((state) => state.level.content)
-    const [classe, setclasse] = useState(2)
+    const [classe, setclasse] = useState(15)
     const classes = ['Ecaflip', 'Feca', 'Xelor', 'Zobal', 'Huppermage', 'Eliotrope', 'Sacrieur', 'Cra', 'Ouginak', 'Pandawa', 'Steamer', 'Sram', 'Roublard', 'Eniripsa', 'Sadida', 'Iop', 'Enutrof', 'Osamodas']
     const [level, setlevel] = useState(niveau)
     const nav = useNavigation()
@@ -188,7 +188,7 @@ const Buildoverview = () => {
                     setlevel(tranchelevel)
                     dispatch(setBuildLevel(tranchelevel))
                 }}
-                defaultValue={0}
+                defaultValue={niveau}
                 labelFontColor={"white"}
                 labelFontWeight={'600'}
                 showFill={true}

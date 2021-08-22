@@ -3,7 +3,7 @@ import {  } from 'react-native'
 import { RARITY,TYPE,LEVEL } from '../actions/actions'
 
 const initialstateLevel ={
-    content:1
+    content:215
 }
 const initialstateType ={
     content:[]

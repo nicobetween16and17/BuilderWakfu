@@ -1,5 +1,5 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View,Image } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import Build from './build'
 import CaracView from './caracview'
@@ -12,12 +12,13 @@ const Tab = createMaterialTopTabNavigator()
 const AptitudeNavigator = () => {
     return (
         <Tab.Navigator
-            initialRouteName="Buildview"
+            initialRouteName="Intel"
 
             screenOptions={{
-                tabBarActiveTintColor: '#d47b6a',
+                tabBarActiveTintColor: '#d780d9',
                 tabBarLabelStyle: { fontSize: 12 },
                 tabBarStyle: { backgroundColor: '#191b24' },
+                
 
 
             }}
@@ -25,27 +26,37 @@ const AptitudeNavigator = () => {
             <Tab.Screen
                 name="Intel"
                 component={Intelligence}
-                options={{ tabBarLabel: 'Intell' }}
+                options={{ tabBarLabel: '',tabBarIcon:({color})=>(
+                    <Image source={require('../images/aptitudes/intelligence.webp')} style={{width:40,height:40}}/>
+                ) }}
             />
             <Tab.Screen
                 name="Force"
                 component={Force}
-                options={{ tabBarLabel: 'Force' }}
+                options={{ tabBarLabel: '',tabBarIcon:({color})=>(
+                    <Image source={require('../images/aptitudes/strength.webp')} style={{width:40,height:40}}/>
+                ) }}
             />
             <Tab.Screen
                 name="Agility"
                 component={Agility}
-                options={{ tabBarLabel: 'AgilitÉ' }}
+                options={{ tabBarLabel: '',tabBarIcon:({color})=>(
+                    <Image source={require('../images/aptitudes/agility.webp')} style={{width:40,height:40}}/>
+                ) }}
             />
             <Tab.Screen
                 name="Chance"
                 component={Chance}
-                options={{ tabBarLabel: 'Chance' }}
+                options={{ tabBarLabel: '',tabBarIcon:({color})=>(
+                    <Image source={require('../images/aptitudes/chance.webp')} style={{width:40,height:40}}/>
+                ) }}
             />
             <Tab.Screen
                 name="Majeur"
                 component={Majeur}
-                options={{ tabBarLabel: 'Majeur' }}
+                options={{ tabBarLabel: '',tabBarIcon:({color})=>(
+                    <Image source={require('../images/aptitudes/major.webp')} style={{width:40,height:40}}/>
+                ) }}
             />
             
         </Tab.Navigator>

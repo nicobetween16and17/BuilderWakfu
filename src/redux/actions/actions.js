@@ -372,3 +372,147 @@ export const setresElem =(value)=>{
         value:value
     }
 }
+export const setforce = (value)=>{
+    return{
+        type:'FORCE',
+        value:value
+    }
+}
+export const setintel = (value)=>{
+    return{
+        type:'INTELL',
+        value:value
+    }
+}
+export const setchance = (value)=>{
+    return{
+        type:'CHANCE',
+        value:value
+    }
+}
+export const setagi = (value)=>{
+    return{
+        type:'AGI',
+        value:value
+    }
+}
+export const setmajeur = (value)=>{
+    return{
+        type:'MAJEUR',
+        value:value
+    }
+}
+export const RESET ='RESET'
+export const resetApPt =(value)=>{
+    return{
+        type:RESET,
+        value:value
+    }
+}
+export const FORCE ='FORCE'
+export const INTELL='INTELL'
+export const AGI ='AGI'
+export const CHANCE = 'CHANCE'
+export const MAJEUR = 'MAJEUR'
+export const ADDITEM ='RESET'
+export const addItem =(value)=>{
+    return{
+        type:ADDITEM,
+        value:value
+    }
+}
+export const RUNECASQUE = 'RUNECASQUE'
+export const setruneCasque =(value,element)=>{
+    return{
+        type:RUNECASQUE,
+        value:value,
+        element:element
+    }
+}
+export const RUNEAMU = 'RUNEAMU'
+export const setruneAmu =(value,element)=>{
+    return{
+        type:RUNEAMU,
+        value:value,
+        element:element
+    }
+}
+export const RUNEPLASTRON = 'RUNEPLASTRON'
+export const setrunePlastron =(value,element)=>{
+    return{
+        type:RUNEPLASTRON,
+        value:value,
+        element:element
+    }
+}
+export const RUNEANNEAU1 = 'RUNEANNEAU1'
+export const setruneAnneau1 =(value,element)=>{
+    return{
+        type:RUNEANNEAU1,
+        value:value,
+        element:element
+    }
+}
+export const RUNEANNEAU2 = 'RUNEANNEAU2'
+export const setruneAnneau2 =(value,element)=>{
+    return{
+        type:RUNEANNEAU2,
+        value:value,
+        element:element
+    }
+}
+export const RUNEBOTTES = 'RUNEBOTTES'
+export const setruneBottes =(value,element)=>{
+    return{
+        type:RUNEBOTTES,
+        value:value,
+        element:element
+    }
+}
+export const RUNECAPE = 'RUNECAPE'
+export const setruneCape =(value,element)=>{
+    return{
+        type:RUNECAPE,
+        value:value,
+        element:element
+    }
+}
+export const RUNEEPAU = 'RUNEEPAU'
+export const setruneEpau =(value,element)=>{
+    return{
+        type:RUNEEPAU,
+        value:value,
+        element:element
+    }
+}
+export const RUNECEINTURE = 'RUNECEINTURE'
+export const setruneCeinture =(value,element)=>{
+    return{
+        type:RUNECEINTURE,
+        value:value,
+        element:element
+    }
+}
+export const RUNEARME = 'RUNEARME'
+export const setruneArme =(value,element)=>{
+    return{
+        type:RUNEARME,
+        value:value,
+        element:element
+        
+    }
+}
+export const RUNELV ='RUNELV'
+export const setruneLv =(value)=>{
+    return{
+        type:RUNELV,
+        value:value
+    }
+}
+export const CURRENTRUNE ='CURRENTRUNE'
+export const setCurrentRune =(value)=>{
+    return{
+        type:CURRENTRUNE,
+        value:value
+    }
+}

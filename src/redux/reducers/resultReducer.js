@@ -20,7 +20,8 @@ export const itemReducer = (state = initialstateItem, action) => {
                 nom: action.value.title,
                 lien: action.value.imageId,
                 rarity: action.value.rarity,
-                type: action.value.type
+                type: action.value.type,
+                stats:action.value.stats
 
             }
 

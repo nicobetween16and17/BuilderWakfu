@@ -18,6 +18,7 @@ import {Provider} from 'react-redux'
 import { Store } from './src/redux/store';
 import NavigatorTop from './src/pages/navigationTop';
 import AptitudeNavigator from './src/pages/aptitudeNavigator';
+import ForgeNavigator from './src/pages/forgeNavigator';
 const Tab = createMaterialBottomTabNavigator();
 const App= () => {
   
@@ -37,7 +38,7 @@ const App= () => {
             <Image source={require('./src/images/search.png')} style={{width:26,height:26}}></Image>
         )
         }}/>
-        <Tab.Screen name="Enchant" component={Enchant}  options={{
+        <Tab.Screen name="Enchantement" component={ForgeNavigator}  options={{
           title:'Enchantement',tabBarColor:'#8cf089',
           tabBarIcon: ({color})=>(
             <Image source={require('./src/images/enchant.png')} style={{width:26,height:26}}></Image>
