@@ -71,7 +71,6 @@ export const casqueReducer = (state = initialstateCasque, action) => {
 
     switch (action.type) {
         case CASQUE:
-            console.log('casqueReducer: ', action.value)
             return { content: action.value }
 
     }

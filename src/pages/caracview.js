@@ -40,7 +40,7 @@ const CaracView = () => {
     const runeFormat = [runes.casque, runes.amu, runes.plastron, runes.anneau1, runes.anneau2, runes.bottes, runes.cape, runes.epau, runes.ceinture, runes.arme]
     const aptitude = useSelector((state) => state.aptitude)
     const ListeItems = useSelector((state) => state.items.listItem)
-    console.log(ListeItems)
+   
     ListeItems.forEach(element => {
         element.stats.forEach(item => {
             switch (item.actionId) {
@@ -82,19 +82,19 @@ const CaracView = () => {
 
                     break;
 
-                case 96:console.log('Relem',item.param[0])
+                case 96:
                      TotalStates.Rterre -= item.params[0]
 
                     break;
-                case 97:console.log('Relem',item.param[0])
+                case 97:
                      TotalStates.Rfeu -= item.params[0]
 
                     break;
-                case 98:console.log('Relem',item.param[0])
+                case 98:
                      TotalStates.Reau -= item.params[0]
 
                     break;
-                case 100: console.log('Relem',item.param[0])
+                case 100: 
                      TotalStates.Reau -= item.params[0], TotalStates.Reau -= item.params[0], TotalStates.Rfeu -= item.params[0], TotalStates.Rair -= item.params[0], TotalStates.Rterre -= item.params[0]
 
                     break;
@@ -229,7 +229,7 @@ const CaracView = () => {
                     switch (item.params[2]) {
                         case 1:
 
-                            console.log('Nb elem', item.params[2])
+                          
                             switch (true) {
                                 case selectedElem.Mair: TotalStates.Mair += item.params[0]; 
                                 case selectedElem.Mfeu: TotalStates.Mfeu += item.params[0]; 
@@ -240,7 +240,7 @@ const CaracView = () => {
                             break;
                         case 2:
 
-                            console.log('Nb elem', item.params[2])
+                           
                             switch (true) {
                                 case selectedElem.Mair: TotalStates.Mair += item.params[0]; 
                                 case selectedElem.Mfeu: TotalStates.Mfeu += item.params[0]; 
@@ -250,7 +250,6 @@ const CaracView = () => {
 
                         case 3:
 
-                            console.log('Nb elem', item.params[2])
                             switch (true) {
                                 case selectedElem.Mair: TotalStates.Mair += item.params[0]; 
                                 case selectedElem.Mfeu: TotalStates.Mfeu += item.params[0]; 
@@ -467,34 +466,34 @@ const CaracView = () => {
     TotalStates.pa+=aptitude.PA
     TotalStates.pm+=aptitude.PM
     TotalStates.pw+=aptitude.PW
-    TotalStates.Meau+= aptitude.Melem
-    TotalStates.Mfeu+= aptitude.Melem
-    TotalStates.Mair+=aptitude.Melem
-    TotalStates.Mterre+= aptitude.Melem
-    TotalStates.DI+= aptitude.DI
-    TotalStates.soinR+= aptitude.soinR
+    TotalStates.Meau+= aptitude.Melem*5
+    TotalStates.Mfeu+= aptitude.Melem*5
+    TotalStates.Mair+=aptitude.Melem*5
+    TotalStates.Mterre+= aptitude.Melem*5
+    TotalStates.DI+= aptitude.DI*10
+    TotalStates.soinR+= aptitude.soinR*6
     TotalStates.ccp+= aptitude.Crit
     TotalStates.prd+= aptitude.PRD
-    TotalStates.ini+= aptitude.Ini
+    TotalStates.ini+= aptitude.Ini*4
     TotalStates.po+= aptitude.PO
-    TotalStates.esq+= aptitude.tacesq+aptitude.esq
-    TotalStates.tac+=aptitude.tacesq+aptitude.tac
+    TotalStates.esq+= aptitude.tacesq*4+aptitude.esq*6
+    TotalStates.tac+=aptitude.tacesq*4+aptitude.tac*6
     TotalStates.ctrl+= aptitude.ctrl
     TotalStates.vol+= aptitude.vol
-    TotalStates.Mcrit+= aptitude.Mcrit
-    TotalStates.Rcrit+= aptitude.Rcrit
-    TotalStates.Mdos+= aptitude.Mdos
-    TotalStates.Rdos+= aptitude.Rdos
-    TotalStates.Mmelee+= aptitude.Mmelee
-    TotalStates.Mdist+= aptitude.Mdist
-    TotalStates.Mmono+=aptitude.Mmono 
-    TotalStates.Mzone+=aptitude.Mzone
-    TotalStates.Msoin+=aptitude.Msoin
-    TotalStates.Mzerk+=aptitude.Mzerk
-    TotalStates.Rfeu+= aptitude.res+aptitude.Relem
-    TotalStates.Reau+=aptitude.res+aptitude.Relem
-    TotalStates.Rair+= aptitude.res+aptitude.Relem,
-    TotalStates.Rterre+= aptitude.res+aptitude.Relem
+    TotalStates.Mcrit+= aptitude.Mcrit*4
+    TotalStates.Rcrit+= aptitude.Rcrit*4
+    TotalStates.Mdos+= aptitude.Mdos*6
+    TotalStates.Rdos+= aptitude.Rdos*4
+    TotalStates.Mmelee+= aptitude.Mmelee*8
+    TotalStates.Mdist+= aptitude.Mdist*8
+    TotalStates.Mmono+=aptitude.Mmono *8
+    TotalStates.Mzone+=aptitude.Mzone*8
+    TotalStates.Msoin+=aptitude.Msoin*6
+    TotalStates.Mzerk+=aptitude.Mzerk*8
+    TotalStates.Rfeu+= aptitude.res*10+aptitude.Relelm*50
+    TotalStates.Reau+=aptitude.res*10+aptitude.Relelm*50
+    TotalStates.Rair+= aptitude.res*10+aptitude.Relelm*50
+    TotalStates.Rterre+= aptitude.res*10+aptitude.Relelm*50
     
     const Stat = ({ image, titre, value }) => {
         const length = value.toString().length

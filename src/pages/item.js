@@ -8,8 +8,6 @@ const FicheItem = () => {
 
     const nav = useNavigation()
     const dispatch = useDispatch()
-
-    console.log(useSelector((state) => state.item))
     const Currentitem = useSelector((state) => state.item)
     const lienImage = useSelector((state) => state.item.lien)
     const linkImage = 'https://static.ankama.com/wakfu/portal/game/item/115/'
@@ -18,12 +16,10 @@ const FicheItem = () => {
     const img = linkImage.concat(lienImage).concat('.png')
     const type = useSelector((state) => state.item.type)
     const chosen = useSelector(state => state.chosen.content)
-    console.log('lien: ', lienImage)
-    console.log('rarity', useSelector((state) => state.item.rarity))
     const nom = useSelector((state) => state.item.nom)
     const stats = useSelector((state) => state.item.stats)
     const Statistique = (stat) => {
-        console.log('stat:', stat.item)
+       
         let statString = ''
         actions.forEach(element => {
             

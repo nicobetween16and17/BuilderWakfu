@@ -32,7 +32,7 @@ export const Apptitude = ({ apptitudeLink, apptitudeName, value, maxvalue, sette
         const time = new Date().getTime()
         const delta = time - lastpress
         console.log('DELTA',delta)
-        const dbt= (delta < 600)&& lastdelta>600 ? true : false
+        const dbt= (delta < 1300)&& lastdelta>600 ? true : false
         setlastpress(time)
         setdelta(delta)
         return dbt

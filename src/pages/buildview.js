@@ -73,7 +73,7 @@ const BuildView = () => {
         '../images/modèles/hupper']
 
 useEffect(() => {
-    console.log('Position: ', position)
+ 
     if (ref !== null) {
         setTimeout(() => {
             ref.scrollTo({ x: 50, y: 0, animated: false })
@@ -87,7 +87,7 @@ return (
             <View style={{ flex: 1, backgroundColor: '#191b24', paddingTop: 20, alignItems: 'center' }}>
                 <View style={{ height: 200 }}>
                     <Animated.ScrollView contentContainerStyle={{ alignItems: 'center' }} ref={(ref) => setref(ref)} onScroll={(event) => {
-                        console.log('Test', event.nativeEvent.contentOffset.x)
+                     
                         if (event.nativeEvent.contentOffset.x < 20) {
                             if (position === 0) {
                                 setposition(17)

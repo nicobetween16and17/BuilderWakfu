@@ -110,7 +110,7 @@ const Buildoverview = () => {
         }
     }
     const [ImgClasse, setImgClasse] = useState(laclasseu)
-    console.log('classe: ', laclasse)
+  
     const dispatch = useDispatch()
     return (
         <View style={{ marginTop: 0, width: 412, height: '95%', alignItems: 'center' }}>
@@ -126,7 +126,7 @@ const Buildoverview = () => {
                 onValueChange={(itemValue, itemIndex) => {
                     setclasse(itemValue)
 
-                    console.log('TEST', classes[itemValue]);
+               
                     dispatch(setClasse(classes[itemValue]))
 
                 }

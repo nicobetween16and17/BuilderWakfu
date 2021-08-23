@@ -32,7 +32,7 @@ export const loadReducer = (state = initialstateLoad,action ) => {
     
     switch (action.type) {
         case LOAD:
-            console.log('loadReducer', Loading)
+
             Loading=!Loading
             return {content:Loading}
     }

@@ -70,13 +70,13 @@ const dispatch = useDispatch()
 
 
         }
-        console.log('TYPE_EQUIP: ',returnedRange,'test 118 in range: ',returnedRange.includes(118))
+       
         return returnedRange
     }
     const setPosition = (position) => {
         let returnedValue = 0
         let positionIndex = (position * 2.15) - (position * 2.15) % 1
-        console.log('position index:', positionIndex)
+    
         switch (true) {
             case position === 0: returnedValue = 15
                 break;

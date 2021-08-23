@@ -60,9 +60,9 @@ const Enchant = () => {
     }
     const changeRune=(couleur,indicator,e)=>{
         if (couleur<4) {
-            console.log('AVANT',couleur)
+           
             couleur+=1
-            console.log('APRES',couleur)
+   
         }else{
             couleur=0
         }
@@ -70,7 +70,7 @@ const Enchant = () => {
         
     }
     const Equipement = ({ type, tab,indicator }) => {
-        console.log('Equipement',indicator,'rune',selected,'currentRune',tab);
+       
         return (
             <View style={{ flex: 1, width: 350, flexDirection: 'row', margin: 10, justifyContent: 'space-between' }}>
                 <Image style={{ width: 39, height: 39 }} source={type} />
