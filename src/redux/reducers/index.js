@@ -3,7 +3,7 @@ import { ApptitudepointsReducer, AptitudeReducer } from './aptitudeReducer'
 import { amuReducer, anneau1Reducer, anneau2Reducer, bottesReducer, BuildlevelReducer, capeReducer, casqueReducer, ceintureReducer, chosenTypeReducer, classeReducer, emblemeReducer, epauReducer, familierReducer, mainReducer, montureReducer, plastronReducer, secondemainReducer } from './buildReducers'
 import { CurrentRuneReducer, RuneLvReducer, RunesReducer } from './forgeReducer'
 import { itemReducer, loadReducer } from './resultReducer'
-import { ItemListReducer } from './resumeReducer'
+import { ItemListReducer, SelectedElementReducer } from './resumeReducer'
 import {levelReducer,typeReducer,rarityReducer} from './SearchReducer'
 
 const allReducers = combineReducers({
@@ -34,6 +34,7 @@ const allReducers = combineReducers({
     runes:RunesReducer,
     runeLV:RuneLvReducer,
     currentRune:CurrentRuneReducer,
+    selectedElem:SelectedElementReducer,
     
 })
 export default allReducers

@@ -55,61 +55,62 @@ const initialstateRune = {
 
 
 }
-const initialstateRunelv={
-    lv:10
-}
+
 export const RunesReducer = (state = initialstateRune, action) => {
     const currentState = { ...state }
     switch (action.type) {
         case RUNECASQUE:
-            currentState.casque[action.element].couleur = action.value;
-            currentState.casque[action.element].level = action.level;
+            currentState.casque[action.element] = action.value;
+            
             break;
 
 
         case RUNEAMU:
 
-            currentState.amu[action.element].couleur = action.value;break;
+            currentState.amu[action.element] = action.value;break;
 
 
         case RUNEPLASTRON:
 
-            currentState.plastron[action.element].couleur = action.value;break;
+            currentState.plastron[action.element] = action.value;break;
 
 
         case RUNEANNEAU1:
 
-            currentState.anneau1[action.element].couleur = action.value;break;
+            currentState.anneau1[action.element] = action.value;break;
 
 
         case RUNEANNEAU2:
 
-            currentState.anneau2[action.element].couleur = action.value;break;
+            currentState.anneau2[action.element] = action.value;break;
 
 
         case RUNEBOTTES:
 
-            currentState.bottes[action.element].couleur = action.value;break;
+            currentState.bottes[action.element] = action.value;break;
 
         case RUNECAPE:
 
-            currentState.cape[action.element].couleur = action.value;break;
+            currentState.cape[action.element] = action.value;break;
 
         case RUNEEPAU:
 
-            currentState.epau[action.element].couleur = action.value;break;
+            currentState.epau[action.element] = action.value;break;
 
         case RUNECEINTURE:
 
-            currentState.ceinture[action.element].couleur = action.value;break;
+            currentState.ceinture[action.element] = action.value;break;
 
         case RUNEARME:
 
-            currentState.arme[action.element].couleur = action.value;break;
+            currentState.arme[action.element] = action.value;break;
         
 
     }
     return currentState
+}
+const initialstateRunelv={
+    lv:10
 }
 export const RuneLvReducer=(state = initialstateRunelv, action)=>{
     switch (action.type) {

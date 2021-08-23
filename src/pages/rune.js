@@ -5,7 +5,8 @@ import { useSelector,useDispatch } from 'react-redux';
 import { setCurrentRune } from '../redux/actions/actions';
 const Runes = () => {
     const dispatch=useDispatch()
-    const RuneLv = useSelector((state)=>state.RuneLv.lv)
+    const RuneLv = useSelector((state)=>state.runeLV.lv)
+    const selected = useSelector((state)=>state.currentRune.rune.effet[0])
     const Chasses = [require('../images/forge/shard_white_empty.webp'),
     require('../images/forge/shard_blue_full.webp'),
     require('../images/forge/shard_green_full.webp'),
@@ -24,12 +25,15 @@ const Runes = () => {
         , { id: 9, source: require('../images/forge/ring.png') }
     ]
 
-    const Items = ({ nom, image, bonus,opacity }) => {
-
+    const Items = ({ nom, image, bonus,effet }) => {
+        let couleur=0
+        effet <6 ?couleur = 3:effet<11?couleur=2 :couleur=1 
+        let opacity
+        effet === selected ? opacity=1:opacity=0.6
         return (
             <View style={{ width: 400, margin: 2 }}>
-                <TouchableOpacity style={{ flexDirection: 'row', opacity: 0.8 }} onPress={()=>{
-                   dispatch(setCurrentRune({lv:RuneLv,effet:[0,0],couleur:0}))
+                <TouchableOpacity style={{ flexDirection: 'row', opacity: opacity }} onPress={()=>{
+                   dispatch(setCurrentRune({lv:RuneLv,effet:[effet,0],couleur:couleur}))
                 }}>
                     <Image style={{ width: 39, height: 39 }} source={image} />
                     <View style={{ justifyContent: 'space-between', flexDirection: 'row',borderColor:'white',borderWidth:2,width:350  }}>
@@ -65,23 +69,23 @@ const Runes = () => {
                 widthPercentage={80}
             />
             <View style={{justifyContent: 'center',alignItems: 'center', width:400,margin:1,borderColor:'white',borderWidth:2 }}>
-                <Items nom='Maitrise Monocible' image={Chasses[3]} bonus={[equips[0], equips[4]]} opacity={false} />
-                <Items nom='Maitrise Zone' image={Chasses[3]} bonus={[equips[1], equips[7]]} opacity={false}/>
-                <Items nom='Maitrise Mélée' image={Chasses[3]} bonus={[equips[0], equips[5]]} opacity={false}/>
-                <Items nom='Maitrise Distance' image={Chasses[3]} bonus={[equips[7], equips[8]]} opacity={false}/>
-                <Items nom='Maitrise Berserk' image={Chasses[3]} bonus={[equips[1], equips[5]]} opacity={false}/>
-                <Items nom='Résistance Terre' image={Chasses[3]} bonus={[equips[2], equips[4]]} opacity={false}/>
-                <Items nom='Maitrise Critique' image={Chasses[2]} bonus={[equips[6], equips[8]]} opacity={false}/>
-                <Items nom='Maitrise Dos' image={Chasses[2]} bonus={[equips[7], equips[4]]} opacity={false}/>
-                <Items nom='Esquive' image={Chasses[2]} bonus={[equips[3], equips[9]]} opacity={false}/>
-                <Items nom='Initiative' image={Chasses[2]} bonus={[equips[1], equips[5]]} opacity={false}/>
-                <Items nom='Résistance Feu' image={Chasses[2]} bonus={[equips[2], equips[7]]} opacity={false}/>
-                <Items nom='Maitrise Elémentaire' image={Chasses[1]} bonus={[equips[2], equips[5]]} opacity={false}/>
-                <Items nom='Tacle' image={Chasses[1]} bonus={[equips[3], equips[9]]} opacity={false}/>
-                <Items nom='Résistance Eau' image={Chasses[1]} bonus={[equips[2], equips[6]]} opacity={false}/>
-                <Items nom='Résistance Air' image={Chasses[1]} bonus={[equips[2], equips[5]]} opacity={false}/>
-                <Items nom='Vie' image={Chasses[1]} bonus={[equips[0], equips[8]]} opacity={false}/>
-                <Items nom='Maitrise Soin' image={Chasses[1]} bonus={[equips[1], equips[6]]} opacity={false}/>
+                <Items nom='Maitrise Monocible' image={Chasses[3]} bonus={[equips[0], equips[4]]}  effet={0}/>
+                <Items nom='Maitrise Zone' image={Chasses[3]} bonus={[equips[1], equips[7]]}  effet={1}/>
+                <Items nom='Maitrise Mélée' image={Chasses[3]} bonus={[equips[0], equips[5]]}  effet={2}/>
+                <Items nom='Maitrise Distance' image={Chasses[3]} bonus={[equips[7], equips[8]]} effet={3}/>
+                <Items nom='Maitrise Berserk' image={Chasses[3]} bonus={[equips[1], equips[5]]} effet={4}/>
+                <Items nom='Résistance Terre' image={Chasses[3]} bonus={[equips[2], equips[4]]} effet={5}/>
+                <Items nom='Maitrise Critique' image={Chasses[2]} bonus={[equips[6], equips[8]]} effet={6}/>
+                <Items nom='Maitrise Dos' image={Chasses[2]} bonus={[equips[7], equips[4]]} effet={7}/>
+                <Items nom='Esquive' image={Chasses[2]} bonus={[equips[3], equips[9]]} effet={8}/>
+                <Items nom='Initiative' image={Chasses[2]} bonus={[equips[1], equips[5]]} effet={9}/>
+                <Items nom='Résistance Feu' image={Chasses[2]} bonus={[equips[2], equips[7]]} effet={10}/>
+                <Items nom='Maitrise Elémentaire' image={Chasses[1]} bonus={[equips[2], equips[5]]} effet={11}/>
+                <Items nom='Tacle' image={Chasses[1]} bonus={[equips[3], equips[9]]} effet={12}/>
+                <Items nom='Résistance Eau' image={Chasses[1]} bonus={[equips[2], equips[6]]} effet={13}/>
+                <Items nom='Résistance Air' image={Chasses[1]} bonus={[equips[2], equips[5]]} effet={14}/>
+                <Items nom='Vie' image={Chasses[1]} bonus={[equips[0], equips[8]]} effet={15}/>
+                <Items nom='Maitrise Soin' image={Chasses[1]} bonus={[equips[1], equips[6]]} effet={16}/>
             </View>
         </ScrollView>
     )

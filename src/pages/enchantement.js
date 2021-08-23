@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setruneAmu, setruneAnneau1, setruneAnneau2, setruneArme, setruneBottes, setruneCape, setruneCasque, setruneCeinture, setruneEpau, setrunePlastron } from "../redux/actions/actions";
 const Enchant = () => {
     const dispatch = useDispatch()
+    const selected = useSelector((state)=>state.currentRune.rune)
     const Runes = useSelector((state) => state.runes)
     const [opacity, setopacity] = useState(0.6);
     const Chasses = [require('../images/forge/shard_white_empty.webp'),
@@ -12,6 +13,7 @@ const Enchant = () => {
     require('../images/forge/shard_red_full.webp'),
     require('../images/forge/shard_white_full.webp')]
     const Dispatch = (indice, info,e) => {
+        info.effet[1]=indice
         switch (indice) {
             case 0:
                 console.log('DISPATCHEDCASQUE')
@@ -68,27 +70,27 @@ const Enchant = () => {
         
     }
     const Equipement = ({ type, tab,indicator }) => {
-        console.log('couleur2',tab[1].couleur);
+        console.log('Equipement',indicator,'rune',selected,'currentRune',tab);
         return (
             <View style={{ flex: 1, width: 350, flexDirection: 'row', margin: 10, justifyContent: 'space-between' }}>
                 <Image style={{ width: 39, height: 39 }} source={type} />
                 <TouchableOpacity onPress={() => {
-                    changeRune(tab[0].couleur,indicator,0)
+                    Dispatch(indicator,selected,0)
                 }}>
                     <Image style={{ width: 39, height: 39 }} source={Chasses[tab[0].couleur]} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {
-                    changeRune(tab[1].couleur,indicator,1)
+                    Dispatch(indicator,selected,1)
                 }}>
                     <Image style={{ width: 39, height: 39 }} source={Chasses[tab[1].couleur]} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {
-                    changeRune(tab[2].couleur,indicator,2)
+                    Dispatch(indicator,selected,2)
                 }}>
                     <Image style={{ width: 39, height: 39 }} source={Chasses[tab[2].couleur]} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {
-                    changeRune(tab[3].couleur,indicator,3)
+                    Dispatch(indicator,selected,3)
                 }}>
                     <Image style={{ width: 39, height: 39 }} source={Chasses[tab[3].couleur]} />
                 </TouchableOpacity>

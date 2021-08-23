@@ -516,3 +516,10 @@ export const setCurrentRune =(value)=>{
         value:value
     }
 }
+export const ELEMENTSELECTED ='ELEMENTSELECTED'
+export const setSelectedElement=(value)=>{
+    return{
+        type:ELEMENTSELECTED,
+        value:value
+    }
+}

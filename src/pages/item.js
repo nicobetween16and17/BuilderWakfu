@@ -26,7 +26,8 @@ const FicheItem = () => {
         console.log('stat:', stat.item)
         let statString = ''
         actions.forEach(element => {
-            if (element.definition.id === stat.item.actionId) {
+            
+            if (element.definition.id === stat.item.actionId && element.description !== undefined) {
                 statString = element.description.fr.replace('[#1]', stat.item.params[0]).replace('[el1]', 'FEU').replace('[el2]', 'EAU').replace('[el3]', 'TERRE').replace('[el4]', 'AIR').replace('[#2]', stat.item.params[2])
             }
         });

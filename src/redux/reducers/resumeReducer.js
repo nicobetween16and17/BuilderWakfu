@@ -1,4 +1,4 @@
-import { ADDITEM } from "../actions/actions"
+import { ADDITEM, ELEMENTSELECTED } from "../actions/actions"
 
 const initialstateItems={
     listItem:[]
@@ -22,4 +22,21 @@ export const ItemListReducer = (state = initialstateItems, action) => {
 
     }
     return currenState
+}
+const initialstateSelectedElement={
+    Mfeu:false,
+    Mair:true,
+    Meau:true,
+    Mterre:true,
+    Rfeu:false,
+    Rair:true,
+    Reau:true,
+    Rterre:true
+}
+export const SelectedElementReducer = (state=initialstateSelectedElement,action)=>{
+    switch (action.type) {
+        case ELEMENTSELECTED:{return action.value}
+            
+    }
+    return state
 }
