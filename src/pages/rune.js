@@ -17,12 +17,13 @@ const Runes = () => {
         , { id: 1, source: require('../images/forge/necklace.png') }
         , { id: 2, source: require('../images/forge/breastplate.png') }
         , { id: 3, source: require('../images/forge/ring.png') }
-        , { id: 4, source: require('../images/forge/boots.png') }
-        , { id: 5, source: require('../images/forge/cape.png') }
-        , { id: 6, source: require('../images/forge/epaulettes.png') }
-        , { id: 7, source: require('../images/forge/belt.png') }
-        , { id: 8, source: require('../images/forge/one_handed_weapon.png') }
-        , { id: 9, source: require('../images/forge/ring.png') }
+        , { id: 4, source: require('../images/forge/ring.png') }
+        , { id: 5, source: require('../images/forge/boots.png') }
+        , { id: 6, source: require('../images/forge/cape.png') }
+        , { id: 7, source: require('../images/forge/epaulettes.png') }
+        , { id: 8, source: require('../images/forge/belt.png') }
+        , { id: 9, source: require('../images/forge/one_handed_weapon.png') }
+       
     ]
 
     const Items = ({ nom, image, bonus,effet }) => {
@@ -69,23 +70,23 @@ const Runes = () => {
                 widthPercentage={80}
             />
             <View style={{justifyContent: 'center',alignItems: 'center', width:400,margin:1,borderColor:'white',borderWidth:2 }}>
-                <Items nom='Maitrise Monocible' image={Chasses[3]} bonus={[equips[0], equips[4]]}  effet={0}/>
-                <Items nom='Maitrise Zone' image={Chasses[3]} bonus={[equips[1], equips[7]]}  effet={1}/>
-                <Items nom='Maitrise Mélée' image={Chasses[3]} bonus={[equips[0], equips[5]]}  effet={2}/>
-                <Items nom='Maitrise Distance' image={Chasses[3]} bonus={[equips[7], equips[8]]} effet={3}/>
-                <Items nom='Maitrise Berserk' image={Chasses[3]} bonus={[equips[1], equips[5]]} effet={4}/>
-                <Items nom='Résistance Terre' image={Chasses[3]} bonus={[equips[2], equips[4]]} effet={5}/>
-                <Items nom='Maitrise Critique' image={Chasses[2]} bonus={[equips[6], equips[8]]} effet={6}/>
-                <Items nom='Maitrise Dos' image={Chasses[2]} bonus={[equips[7], equips[4]]} effet={7}/>
-                <Items nom='Esquive' image={Chasses[2]} bonus={[equips[3], equips[9]]} effet={8}/>
-                <Items nom='Initiative' image={Chasses[2]} bonus={[equips[1], equips[5]]} effet={9}/>
-                <Items nom='Résistance Feu' image={Chasses[2]} bonus={[equips[2], equips[7]]} effet={10}/>
-                <Items nom='Maitrise Elémentaire' image={Chasses[1]} bonus={[equips[2], equips[5]]} effet={11}/>
-                <Items nom='Tacle' image={Chasses[1]} bonus={[equips[3], equips[9]]} effet={12}/>
-                <Items nom='Résistance Eau' image={Chasses[1]} bonus={[equips[2], equips[6]]} effet={13}/>
-                <Items nom='Résistance Air' image={Chasses[1]} bonus={[equips[2], equips[5]]} effet={14}/>
-                <Items nom='Vie' image={Chasses[1]} bonus={[equips[0], equips[8]]} effet={15}/>
-                <Items nom='Maitrise Soin' image={Chasses[1]} bonus={[equips[1], equips[6]]} effet={16}/>
+                <Items nom='Maitrise Monocible' image={Chasses[3]} bonus={[equips[0], equips[5]]}  effet={0}/>
+                <Items nom='Maitrise Zone' image={Chasses[3]} bonus={[equips[1], equips[8]]}  effet={1}/>
+                <Items nom='Maitrise Mélée' image={Chasses[3]} bonus={[equips[0], equips[6]]}  effet={2}/>
+                <Items nom='Maitrise Distance' image={Chasses[3]} bonus={[equips[8], equips[9]]} effet={3}/>
+                <Items nom='Maitrise Berserk' image={Chasses[3]} bonus={[equips[1], equips[6]]} effet={4}/>
+                <Items nom='Résistance Terre' image={Chasses[3]} bonus={[equips[2], equips[5]]} effet={5}/>
+                <Items nom='Maitrise Critique' image={Chasses[2]} bonus={[equips[7], equips[9]]} effet={6}/>
+                <Items nom='Maitrise Dos' image={Chasses[2]} bonus={[equips[8], equips[5]]} effet={7}/>
+                <Items nom='Esquive' image={Chasses[2]} bonus={[equips[3], equips[4]]} effet={8}/>
+                <Items nom='Initiative' image={Chasses[2]} bonus={[equips[1], equips[6]]} effet={9}/>
+                <Items nom='Résistance Feu' image={Chasses[2]} bonus={[equips[2], equips[8]]} effet={10}/>
+                <Items nom='Maitrise Elémentaire' image={Chasses[1]} bonus={[equips[2], equips[6]]} effet={11}/>
+                <Items nom='Tacle' image={Chasses[1]} bonus={[equips[3], equips[4]]} effet={12}/>
+                <Items nom='Résistance Eau' image={Chasses[1]} bonus={[equips[2], equips[7]]} effet={13}/>
+                <Items nom='Résistance Air' image={Chasses[1]} bonus={[equips[2], equips[6]]} effet={14}/>
+                <Items nom='Vie' image={Chasses[1]} bonus={[equips[0], equips[9]]} effet={15}/>
+                <Items nom='Maitrise Soin' image={Chasses[1]} bonus={[equips[1], equips[7]]} effet={16}/>
             </View>
         </ScrollView>
     )
