@@ -22,7 +22,7 @@ Modifs en cours:
 
 valeur de Transformations:
 
-Aptitude /n
+Aptitude
 PV 4%/lv
 Res 10/lv
 Soin Recu 6%/lv
