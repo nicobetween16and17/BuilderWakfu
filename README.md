@@ -49,3 +49,5 @@ resistances               0 2 5 7 10 13 15 17 20 22 25 (alternance +2/+3)
 calcul des resistance (1 - 0.8^(resistance/100))*100
 calcul des pv:        pv fixe*(1+(coef de pv)/100)
 
+
+https://imgur.com/a/PDi0j1U
