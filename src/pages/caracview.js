@@ -65,7 +65,7 @@ const CaracView = () => {
                 case 71: TotalStates.Rdos += item.params[0]
 
                     break;
-                case 80: TotalStates.Reau += item.params[0], TotalStates.Reau += item.params[0], TotalStates.Rfeu += item.params[0], TotalStates.Rair += item.params[0], TotalStates.Rterre += item.params[0]
+                case 80: TotalStates.Reau += item.params[0], TotalStates.Rfeu += item.params[0], TotalStates.Rterre += item.params[0], TotalStates.Rair += item.params[0]
 
                     break;
                 case 82: TotalStates.Rfeu += item.params[0]
