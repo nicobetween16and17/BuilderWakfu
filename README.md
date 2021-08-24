@@ -22,7 +22,7 @@ Modifs en cours:
 
 valeur de Transformations:
 
-Aptitude
+Aptitude /n
 PV 4%/lv
 Res 10/lv
 Soin Recu 6%/lv
@@ -34,9 +34,17 @@ pdv: 20/lv
 
 Rune
 maitrises classique       0 1 3 4 6 7 | 10 15 | 19 24 30 (alternance +2/+1 -> alternance +3/+2 -> +(x+1), x=4=>(+4,+5,+6)) ---> Logique a chier
+
+
 maitrise specialisées/ini 0 2 4 6 8 10 | 14 | 20 26 32 | 40 (+2 -> +4 -> +6 ->+8)
+
+
 esquive/tacle             0 3 6 9 12 15| 21 | 30 39 48 | 60 (+3 -> +6 -> +9 -> +12) 
+
+
 resistances               0 2 5 7 10 13 15 17 20 22 25 (alternance +2/+3)
+
+
 
 calcul des resistance (1 - 0.8^(resistance/100))*100
 calcul des pv:        pv fixe*(1+(coef de pv)/100)
