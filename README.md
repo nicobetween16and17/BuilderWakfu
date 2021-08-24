@@ -54,3 +54,4 @@ https://imgur.com/a/PDi0j1U
 https://wakfu.cdn.ankama.com/gamedata/1.72.1.181678/items.json
 https://wakfu.cdn.ankama.com/gamedata/1.72.1.181678/actions.json
 https://wakfu.cdn.ankama.com/gamedata/1.72.1.181678/equipmentItemTypes.json
+https://www.wakfu.com/fr/prehome
